@@ -2,7 +2,8 @@
     "name": "Lent MADPID Prodject - Oliver Smith",
     "description": "",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "corgio": "*"
     },
     "files": [
         "main.blocks",

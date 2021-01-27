@@ -1,6 +1,7 @@
-scene.onHitWall(SpriteKind.Player, function (sprite, location) {
-    info.changeLifeBy(-1)
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.darkGroundCenter, function (sprite, location) {
     tiles.placeOnRandomTile(mySprite, sprites.dungeon.collectibleInsignia)
+    info.changeLifeBy(-1)
+    music.powerDown.play()
 })
 let mySprite: Sprite = null
 mySprite = sprites.create(img`

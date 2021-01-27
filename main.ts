@@ -1,7 +1,10 @@
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.darkGroundCenter, function (sprite, location) {
-    tiles.placeOnRandomTile(mySprite, sprites.dungeon.collectibleInsignia)
     info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(mySprite, sprites.dungeon.collectibleInsignia)
     music.powerDown.play()
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestOpen, function (sprite, location) {
+    tiles.setTilemap(tilemap`level2`)
 })
 let mySprite: Sprite = null
 mySprite = sprites.create(img`
@@ -28,3 +31,4 @@ scene.setBackgroundColor(9)
 tiles.setTilemap(tilemap`level1`)
 tiles.placeOnRandomTile(mySprite, sprites.dungeon.collectibleInsignia)
 info.setLife(3)
+info.startCountdown(30)

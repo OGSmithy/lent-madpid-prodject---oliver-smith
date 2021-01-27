@@ -1,10 +1,33 @@
+scene.onOverlapTile(SpriteKind.Player, sprites.vehicle.roadVertical, function (sprite, location) {
+	
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.vehicle.roadTurn3, function (sprite, location) {
+	
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.vehicle.roadHorizontal, function (sprite, location) {
+	
+})
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.darkGroundCenter, function (sprite, location) {
     info.changeLifeBy(-1)
     tiles.placeOnRandomTile(mySprite, sprites.dungeon.collectibleInsignia)
     music.powerDown.play()
 })
+scene.onOverlapTile(SpriteKind.Player, sprites.vehicle.roadTurn4, function (sprite, location) {
+	
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.vehicle.roadTurn1, function (sprite, location) {
+	
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.vehicle.roadTurn2, function (sprite, location) {
+	
+})
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestOpen, function (sprite, location) {
     tiles.setTilemap(tilemap`level2`)
+    tiles.placeOnRandomTile(mySprite, sprites.builtin.field1)
+    info.startCountdown(30)
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.vehicle.roadIntersection2, function (sprite, location) {
+	
 })
 let mySprite: Sprite = null
 mySprite = sprites.create(img`

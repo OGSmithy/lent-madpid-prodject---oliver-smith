@@ -69,6 +69,9 @@ scene.onOverlapTile(SpriteKind.Player, sprites.vehicle.roadTurn2, function (spri
     info.startCountdown(30)
     music.powerDown.play()
 })
+scene.onOverlapTile(SpriteKind.Player, sprites.castle.saplingOak, function (sprite, location) {
+    game.over(true)
+})
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestOpen, function (sprite, location) {
     tiles.setTilemap(tilemap`level4`)
     tiles.placeOnRandomTile(mySprite, sprites.builtin.field1)

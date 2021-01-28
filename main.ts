@@ -1,18 +1,84 @@
+scene.onOverlapTile(SpriteKind.Player, sprites.vehicle.roadIntersection4, function (sprite, location) {
+    tiles.placeOnRandomTile(mySprite, sprites.castle.rock0)
+    info.changeLifeBy(-1)
+    info.startCountdown(30)
+    music.powerDown.play()
+})
 scene.onOverlapTile(SpriteKind.Player, sprites.builtin.brick, function (sprite, location) {
     tiles.placeOnRandomTile(mySprite, sprites.builtin.field1)
     info.changeLifeBy(-1)
+    info.startCountdown(30)
+    music.powerDown.play()
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.vehicle.roadVertical, function (sprite, location) {
+    tiles.placeOnRandomTile(mySprite, sprites.castle.rock0)
+    info.changeLifeBy(-1)
+    info.startCountdown(30)
+    music.powerDown.play()
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.vehicle.roadTurn3, function (sprite, location) {
+    tiles.placeOnRandomTile(mySprite, sprites.castle.rock0)
+    info.changeLifeBy(-1)
+    info.startCountdown(30)
+    music.powerDown.play()
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.vehicle.roadHorizontal, function (sprite, location) {
+    tiles.placeOnRandomTile(mySprite, sprites.castle.rock0)
+    info.changeLifeBy(-1)
+    info.startCountdown(30)
     music.powerDown.play()
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.darkGroundCenter, function (sprite, location) {
-    info.changeLifeBy(-1)
     tiles.placeOnRandomTile(mySprite, sprites.dungeon.collectibleInsignia)
+    info.startCountdown(30)
+    info.changeLifeBy(-1)
+    music.powerDown.play()
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.vehicle.roadTurn4, function (sprite, location) {
+    tiles.placeOnRandomTile(mySprite, sprites.castle.rock0)
+    info.changeLifeBy(-1)
+    info.startCountdown(30)
+    music.powerDown.play()
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.vehicle.roadTurn1, function (sprite, location) {
+    tiles.placeOnRandomTile(mySprite, sprites.castle.rock0)
+    info.changeLifeBy(-1)
+    info.startCountdown(30)
+    music.powerDown.play()
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.vehicle.roadIntersection3, function (sprite, location) {
+    tiles.placeOnRandomTile(mySprite, sprites.castle.rock0)
+    info.changeLifeBy(-1)
+    info.startCountdown(30)
+    music.powerDown.play()
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.hazardLava1, function (sprite, location) {
+    tiles.setTilemap(tilemap`level2`)
+    tiles.placeOnRandomTile(mySprite, sprites.castle.rock0)
+    info.startCountdown(30)
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.vehicle.roadIntersection1, function (sprite, location) {
+    tiles.placeOnRandomTile(mySprite, sprites.castle.rock0)
+    info.changeLifeBy(-1)
+    info.startCountdown(30)
+    music.powerDown.play()
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.vehicle.roadTurn2, function (sprite, location) {
+    tiles.placeOnRandomTile(mySprite, sprites.castle.rock0)
+    info.changeLifeBy(-1)
     info.startCountdown(30)
     music.powerDown.play()
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestOpen, function (sprite, location) {
-    tiles.setTilemap(tilemap`level2`)
+    tiles.setTilemap(tilemap`level4`)
     tiles.placeOnRandomTile(mySprite, sprites.builtin.field1)
     info.startCountdown(30)
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.vehicle.roadIntersection2, function (sprite, location) {
+    tiles.placeOnRandomTile(mySprite, sprites.castle.rock0)
+    info.changeLifeBy(-1)
+    info.startCountdown(30)
+    music.powerDown.play()
 })
 let mySprite: Sprite = null
 mySprite = sprites.create(img`

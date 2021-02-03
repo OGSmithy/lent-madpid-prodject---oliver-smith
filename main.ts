@@ -4,6 +4,9 @@ scene.onOverlapTile(SpriteKind.Player, sprites.vehicle.roadIntersection4, functi
     info.startCountdown(30)
     music.powerDown.play()
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`tile28`, function (sprite, location) {
+    game.over(true)
+})
 scene.onOverlapTile(SpriteKind.Player, sprites.builtin.brick, function (sprite, location) {
     tiles.placeOnRandomTile(mySprite, sprites.builtin.field1)
     info.changeLifeBy(-1)
@@ -15,6 +18,10 @@ scene.onOverlapTile(SpriteKind.Player, sprites.vehicle.roadVertical, function (s
     info.changeLifeBy(-1)
     info.startCountdown(30)
     music.powerDown.play()
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.castle.shrub, function (sprite, location) {
+    info.changeLifeBy(1)
+    tiles.placeOnRandomTile(mySprite, sprites.castle.rock0)
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.vehicle.roadTurn3, function (sprite, location) {
     tiles.placeOnRandomTile(mySprite, sprites.castle.rock0)

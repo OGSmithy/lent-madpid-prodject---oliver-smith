@@ -22,6 +22,12 @@ scene.onOverlapTile(SpriteKind.Player, sprites.vehicle.roadTurn3, function (spri
     info.startCountdown(30)
     music.powerDown.play()
 })
+scene.onOverlapTile(SpriteKind.Player, sprites.castle.tileDarkGrass3, function (sprite, location) {
+    tiles.placeOnRandomTile(mySprite, sprites.builtin.field1)
+    info.changeLifeBy(-1)
+    info.startCountdown(30)
+    music.powerDown.play()
+})
 scene.onOverlapTile(SpriteKind.Player, sprites.vehicle.roadHorizontal, function (sprite, location) {
     tiles.placeOnRandomTile(mySprite, sprites.castle.rock0)
     info.changeLifeBy(-1)
@@ -56,6 +62,7 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.hazardLava1, function (sp
     tiles.setTilemap(tilemap`level2`)
     tiles.placeOnRandomTile(mySprite, sprites.castle.rock0)
     info.startCountdown(30)
+    music.powerUp.play()
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.vehicle.roadIntersection1, function (sprite, location) {
     tiles.placeOnRandomTile(mySprite, sprites.castle.rock0)
@@ -70,12 +77,16 @@ scene.onOverlapTile(SpriteKind.Player, sprites.vehicle.roadTurn2, function (spri
     music.powerDown.play()
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.castle.saplingOak, function (sprite, location) {
-    game.over(true)
+    tiles.setTilemap(tilemap`level7`)
+    tiles.placeOnRandomTile(mySprite, assets.tile`tile0`)
+    music.magicWand.play()
+    effects.confetti.startScreenEffect()
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestOpen, function (sprite, location) {
     tiles.setTilemap(tilemap`level4`)
     tiles.placeOnRandomTile(mySprite, sprites.builtin.field1)
     info.startCountdown(30)
+    music.powerUp.play()
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.vehicle.roadIntersection2, function (sprite, location) {
     tiles.placeOnRandomTile(mySprite, sprites.castle.rock0)
@@ -109,3 +120,4 @@ tiles.setTilemap(tilemap`level1`)
 tiles.placeOnRandomTile(mySprite, sprites.dungeon.collectibleInsignia)
 info.setLife(3)
 info.startCountdown(30)
+music.setVolume(50)
